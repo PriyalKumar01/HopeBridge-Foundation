@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery - Photos from HopeBridge Foundation's plantation, education, medical camps, and community events.">
+  <title>Gallery | HopeBridge Foundation</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gallery-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .gallery-full-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+    .gallery-full-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-full-item:hover img { transform: scale(1.07); }
+    .gallery-full-item .gallery-overlay { opacity: 0; transition: var(--transition); }
+    .gallery-full-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-cats { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+    .cat-btn {
+      padding: 8px 22px;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.3);
+      background: transparent;
+      color: var(--white);
+      font-family: 'Inter',sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .cat-btn.active, .cat-btn:hover { background: var(--gold); border-color: var(--gold); }
+    @media(max-width:768px){ .gallery-full-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:480px){ .gallery-full-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="HopeBridge Logo"><div class="nav-logo-text" style="color:var(--teal-dark)">HopeBridge<span style="color:var(--gold)">Foundation</span></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-cta"><a href="donate.html" class="btn btn-primary">❤ Donate Now</a></div>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileNav()"><span style="background:var(--text-dark)"></span><span style="background:var(--text-dark)"></span><span style="background:var(--text-dark)"></span></div>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="volunteer.html">Volunteer</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a><a href="donate.html" class="btn btn-primary">❤ Donate Now</a></nav>
+
+<section class="page-hero" style="background:linear-gradient(135deg,var(--teal-dark),var(--teal));padding-bottom:100px">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+    <h1>Gallery of <span style="color:var(--gold-light)">Impact</span></h1>
+    <p>Moments that inspire — from our programs across India</p>
+  </div>
+</section>
+
+<section class="gallery section-pad">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:8px">
+      <span class="section-label">Our Work in Pictures</span>
+      <h2 class="section-title" style="color:var(--white)">Captured <span>Moments</span></h2>
+    </div>
+    <div class="gallery-cats">
+      <button class="cat-btn active" onclick="filterGallery('all',this)">All</button>
+      <button class="cat-btn" onclick="filterGallery('education',this)">📚 Education</button>
+      <button class="cat-btn" onclick="filterGallery('plantation',this)">🌱 Plantation</button>
+      <button class="cat-btn" onclick="filterGallery('medical',this)">❤️ Medical</button>
+      <button class="cat-btn" onclick="filterGallery('community',this)">🏘️ Community</button>
+      <button class="cat-btn" onclick="filterGallery('women',this)">👩 Women</button>
+      <button class="cat-btn" onclick="filterGallery('animals',this)">🐶 Animals</button>
+    </div>
+    <div class="gallery-full-grid" id="galleryGrid">
+      <div class="gallery-full-item fade-in" data-cat="education" onclick="openLightbox('assets/images/gallery_education.png')">
+        <img src="assets/images/gallery_education.png" alt="Education Program">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Education Support</h4><span>Digital Learning Initiative, Delhi</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="plantation" style="transition-delay:0.05s" onclick="openLightbox('assets/images/gallery_plantation.png')">
+        <img src="assets/images/gallery_plantation.png" alt="Plantation Drive">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Tree Plantation Drive</h4><span>Green Earth Campaign, Jaipur</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="medical" style="transition-delay:0.1s" onclick="openLightbox('assets/images/gallery_medical.png')">
+        <img src="assets/images/gallery_medical.png" alt="Medical Camp">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Free Medical Camp</h4><span>Healthcare Drive, Rajasthan</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="community" style="transition-delay:0.15s" onclick="openLightbox('assets/images/gallery_community.png')">
+        <img src="assets/images/gallery_community.png" alt="Community Event">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Community Celebration</h4><span>Annual Gathering, Mumbai</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="women" style="transition-delay:0.2s" onclick="openLightbox('assets/images/gallery_women.png')">
+        <img src="assets/images/gallery_women.png" alt="Women Empowerment">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Women's Skill Workshop</h4><span>Empowerment Drive, Lucknow</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="animals" style="transition-delay:0.25s" onclick="openLightbox('assets/images/gallery_animals.png')">
+        <img src="assets/images/gallery_animals.png" alt="Animal Welfare">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Animal Rescue Operation</h4><span>Animal Welfare Program, Pune</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="education" style="transition-delay:0.3s" onclick="openLightbox('assets/images/gallery_education.png')">
+        <img src="assets/images/gallery_education.png" alt="Tutoring Session" style="filter:saturate(1.2)">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Free Tutoring Session</h4><span>After-school Program, Chennai</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="plantation" style="transition-delay:0.35s" onclick="openLightbox('assets/images/gallery_plantation.png')">
+        <img src="assets/images/gallery_plantation.png" alt="Green Drive" style="filter:hue-rotate(10deg)">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>School Plantation Drive</h4><span>Eco Warriors, Hyderabad</span></div></div>
+      </div>
+      <div class="gallery-full-item fade-in" data-cat="community" style="transition-delay:0.4s" onclick="openLightbox('assets/images/about_team.png')">
+        <img src="assets/images/about_team.png" alt="Team Meeting">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Foundation Team</h4><span>Planning & Strategy, New Delhi HQ</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="Gallery Image">
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="nav-logo"><img src="assets/images/logo.png" alt="Logo" style="width:40px;height:40px;border-radius:8px"><div class="nav-logo-text">HopeBridge<span>Foundation</span></div></div><p>Building hope and empowering lives across India since 2015.</p><div class="footer-social"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">in</a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">→ Home</a></li><li><a href="about.html">→ About Us</a></li><li><a href="programs.html">→ Programs</a></li><li><a href="volunteer.html">→ Volunteer</a></li><li><a href="donate.html">→ Donate</a></li></ul></div><div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">→ Education</a></li><li><a href="programs.html">→ Environment</a></li><li><a href="programs.html">→ Healthcare</a></li><li><a href="programs.html">→ Women Empowerment</a></li><li><a href="programs.html">→ Animal Welfare</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@hopebridgefoundation.org">→ info@hopebridgefoundation.org</a></li><li><a href="tel:+911234567890">→ +91 12345 67890</a></li><li><a href="#">→ 42, Hope Street, New Delhi</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 HopeBridge Foundation. All rights reserved.</span><span>Made with ❤ for a better world</span></div></div></footer>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="toast" id="toast"></div>
+<script src="assets/js/main.js"></script>
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-full-item').forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = 'block';
+      item.style.animation = 'none';
+      setTimeout(() => { item.style.animation = ''; }, 10);
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donate to HopeBridge Foundation - Your contribution empowers lives through education and healthcare.">
+  <title>Donate | HopeBridge Foundation</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="HopeBridge Logo"><div class="nav-logo-text" style="color:var(--teal-dark)">HopeBridge<span style="color:var(--gold)">Foundation</span></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-cta"><a href="donate.html" class="btn btn-primary">❤ Donate Now</a></div>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileNav()"><span style="background:var(--text-dark)"></span><span style="background:var(--text-dark)"></span><span style="background:var(--text-dark)"></span></div>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="volunteer.html">Volunteer</a><a href="gallery.html">Gallery</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a><a href="donate.html" class="btn btn-primary">❤ Donate Now</a></nav>
+
+<section class="page-hero" style="background:linear-gradient(135deg,var(--gold-dark),var(--gold))">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.8)">Home</a> / Donate</div>
+    <h1>Make a <span style="color:var(--teal-dark)">Donation</span></h1>
+    <p>Your generosity creates ripples of change across communities</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="donate-inner">
+      <div class="donate-info fade-up">
+        <span class="section-label">Your Impact</span>
+        <h2 class="section-title">Every Rupee <span>Matters</span></h2>
+        <p class="section-desc" style="margin-bottom:32px">See how your donation directly transforms lives across HopeBridge's five program areas.</p>
+        <div class="impact-cards">
+          <div class="impact-card">
+            <div class="impact-icon">📚</div>
+            <div class="impact-text"><h4>₹500 — One Month of Tutoring</h4><p>Funds a complete month of free tutoring sessions for one child</p></div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-icon">🌱</div>
+            <div class="impact-text"><h4>₹1,000 — Plant 10 Trees</h4><p>Plants and nurtures 10 saplings in rural and urban areas</p></div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-icon">❤️</div>
+            <div class="impact-text"><h4>₹2,500 — Medical Camp Support</h4><p>Covers medicines and consultations for 5 rural patients</p></div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-icon">👩</div>
+            <div class="impact-text"><h4>₹5,000 — Skill Training Scholarship</h4><p>Funds vocational training for one woman for 3 months</p></div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-icon">🐶</div>
+            <div class="impact-text"><h4>₹10,000 — Animal Rescue Operation</h4><p>Covers full rescue, treatment and 30 days of care for a stray</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="donate-form-wrap fade-up" style="transition-delay:0.2s">
+        <h3>Choose Your Donation</h3>
+        <div class="amount-grid">
+          <button class="amount-btn" onclick="selectAmount(this,'500')">₹500</button>
+          <button class="amount-btn active" onclick="selectAmount(this,'1000')">₹1,000</button>
+          <button class="amount-btn" onclick="selectAmount(this,'2500')">₹2,500</button>
+          <button class="amount-btn" onclick="selectAmount(this,'5000')">₹5,000</button>
+          <button class="amount-btn" onclick="selectAmount(this,'10000')">₹10,000</button>
+          <button class="amount-btn" onclick="selectAmount(this,'')">Custom</button>
+        </div>
+        <form onsubmit="handleDonateSubmit(event)">
+          <div class="form-group"><label>Donation Amount (₹) *</label><input type="number" id="customAmount" value="1000" placeholder="Enter amount" min="100" required></div>
+          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" required></div>
+          <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+          <div class="form-group"><label>Donate Towards</label>
+            <select style="width:100%;padding:13px 16px;border:1.5px solid rgba(13,110,110,0.2);border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:0.95rem;background:var(--white);outline:none">
+              <option>Where It's Needed Most</option>
+              <option>📚 Education Support</option>
+              <option>🌱 Environment Program</option>
+              <option>❤️ Healthcare</option>
+              <option>👩 Women Empowerment</option>
+              <option>🐶 Animal Welfare</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message (Optional)</label><input type="text" placeholder="A message of hope..."></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem">❤ Proceed to Donate</button>
+        </form>
+        <p style="font-size:0.78rem;color:var(--text-light);text-align:center;margin-top:16px">🔒 100% Secure & Transparent. Donations are eligible for 80G tax exemption.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BADGES -->
+<section style="background:var(--cream);padding:56px 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center">
+      <div class="fade-up" style="padding:28px 16px">
+        <div style="font-size:2.5rem;margin-bottom:12px">🔒</div>
+        <h4 style="font-family:'Inter',sans-serif;color:var(--teal-dark);font-size:0.95rem;margin-bottom:6px">100% Secure</h4>
+        <p style="font-size:0.8rem;color:var(--text-light)">SSL encrypted & RBI-compliant payment processing</p>
+      </div>
+      <div class="fade-up" style="padding:28px 16px;transition-delay:0.1s">
+        <div style="font-size:2.5rem;margin-bottom:12px">📋</div>
+        <h4 style="font-family:'Inter',sans-serif;color:var(--teal-dark);font-size:0.95rem;margin-bottom:6px">80G Tax Benefit</h4>
+        <p style="font-size:0.8rem;color:var(--text-light)">Receive instant 80G certificate for IT exemption</p>
+      </div>
+      <div class="fade-up" style="padding:28px 16px;transition-delay:0.2s">
+        <div style="font-size:2.5rem;margin-bottom:12px">📊</div>
+        <h4 style="font-family:'Inter',sans-serif;color:var(--teal-dark);font-size:0.95rem;margin-bottom:6px">Full Transparency</h4>
+        <p style="font-size:0.8rem;color:var(--text-light)">Annual reports & fund utilization available publicly</p>
+      </div>
+      <div class="fade-up" style="padding:28px 16px;transition-delay:0.3s">
+        <div style="font-size:2.5rem;margin-bottom:12px">🏛️</div>
+        <h4 style="font-family:'Inter',sans-serif;color:var(--teal-dark);font-size:0.95rem;margin-bottom:6px">FCRA Registered</h4>
+        <p style="font-size:0.8rem;color:var(--text-light)">Registered NGO under Indian Companies Act, 2013</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="nav-logo"><img src="assets/images/logo.png" alt="Logo" style="width:40px;height:40px;border-radius:8px"><div class="nav-logo-text">HopeBridge<span>Foundation</span></div></div><p>Building hope and empowering lives across India since 2015.</p><div class="footer-social"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">𝕏</a><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">in</a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">→ Home</a></li><li><a href="about.html">→ About Us</a></li><li><a href="programs.html">→ Programs</a></li><li><a href="volunteer.html">→ Volunteer</a></li><li><a href="donate.html">→ Donate</a></li></ul></div><div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html">→ Education</a></li><li><a href="programs.html">→ Environment</a></li><li><a href="programs.html">→ Healthcare</a></li><li><a href="programs.html">→ Women Empowerment</a></li><li><a href="programs.html">→ Animal Welfare</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@hopebridgefoundation.org">→ info@hopebridgefoundation.org</a></li><li><a href="tel:+911234567890">→ +91 12345 67890</a></li><li><a href="#">→ 42, Hope Street, New Delhi</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 HopeBridge Foundation. All rights reserved.</span><span>Made with ❤ for a better world</span></div></div></footer>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="toast" id="toast"></div>
+<script src="assets/js/main.js"></script>
+<script>
+function handleDonateSubmit(e) {
+  e.preventDefault();
+  const amount = document.getElementById('customAmount').value;
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = '✓ Processing...';
+  setTimeout(() => {
+    btn.textContent = '✓ Thank You for Your Donation!';
+    btn.style.background = 'linear-gradient(135deg,#0d6e6e,#1a9090)';
+    showToast('✓ Thank you! Your donation of ₹' + amount + ' has been received.');
+    setTimeout(() => { btn.textContent = '❤ Proceed to Donate'; btn.style.background=''; e.target.reset(); document.getElementById('customAmount').value='1000'; }, 4000);
+  }, 1500);
+}
+</script>
+</body>
+</html>

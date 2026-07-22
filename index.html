@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HopeBridge Foundation - Building Hope, Empowering Lives through education, healthcare, environmental awareness, and community development.">
+  <title>HopeBridge Foundation | Building Hope, Empowering Lives</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo.png" alt="HopeBridge Logo">
+      <div class="nav-logo-text">HopeBridge<span>Foundation</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="donate.html" class="btn btn-primary">❤ Donate Now</a>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="programs.html">Programs</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
+  <a href="donate.html" class="btn btn-primary">❤ Donate Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <img class="hero-img" src="assets/images/hero_banner.png" alt="HopeBridge Foundation Community">
+  <div class="hero-bg"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">🌍 Serving Communities Since 2015</div>
+      <h1 class="hero-title">
+        Building <span class="highlight">Hope,</span><br>
+        Empowering <span class="highlight">Lives</span>
+      </h1>
+      <p class="hero-subtitle">
+        "Together we create opportunities through education, healthcare,<br>environmental awareness, and community development."
+      </p>
+      <div class="hero-btns">
+        <a href="donate.html" class="btn btn-primary">❤ Donate Now</a>
+        <a href="volunteer.html" class="btn btn-outline">🤝 Become a Volunteer</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat-card fade-up">
+        <span class="hero-stat-num" data-target="15000">0</span>
+        <span class="hero-stat-label">Beneficiaries</span>
+      </div>
+      <div class="hero-stat-card fade-up" style="transition-delay:0.1s">
+        <span class="hero-stat-num" data-target="300">0</span>
+        <span class="hero-stat-label">Volunteers</span>
+      </div>
+      <div class="hero-stat-card fade-up" style="transition-delay:0.2s">
+        <span class="hero-stat-num" data-target="75">0</span>
+        <span class="hero-stat-label">Campaigns</span>
+      </div>
+      <div class="hero-stat-card fade-up" style="transition-delay:0.3s">
+        <span class="hero-stat-num" data-target="20">0</span>
+        <span class="hero-stat-label">Cities</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="about section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-in">
+        <img src="assets/images/about_team.png" alt="HopeBridge Foundation Team">
+        <div class="about-img-badge">10+<small>Years of Impact</small></div>
+      </div>
+      <div class="about-content fade-up">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Who We <span>Are</span></h2>
+        <p class="section-desc">
+          HopeBridge Foundation is a non-profit organization committed to improving lives through education, healthcare, skill development, environmental conservation, and humanitarian support. Our mission is to empower communities by creating sustainable opportunities for growth and social impact.
+        </p>
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">🎯</div>
+            <div>
+              <h4>Our Mission</h4>
+              <p>Empower communities with resources and opportunities</p>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">👁</div>
+            <div>
+              <h4>Our Vision</h4>
+              <p>A world where every person thrives with dignity</p>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🤝</div>
+            <div>
+              <h4>Integrity</h4>
+              <p>Transparency and accountability in all we do</p>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">💡</div>
+            <div>
+              <h4>Innovation</h4>
+              <p>Creative solutions for lasting social impact</p>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-teal" style="margin-top:32px">Learn More About Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS PREVIEW -->
+<section class="programs section-pad">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Our <span>Programs</span></h2>
+      <p class="section-desc" style="margin:0 auto">We run multiple programs to create lasting change across communities in India.</p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card fade-up">
+        <div class="program-icon">📚</div>
+        <h3>Education Support</h3>
+        <p>Scholarships, digital learning infrastructure, and free tutoring sessions to unlock every child's potential.</p>
+        <div class="program-tags">
+          <span class="program-tag">Scholarships</span>
+          <span class="program-tag">Digital Learning</span>
+          <span class="program-tag">Tutoring</span>
+        </div>
+      </div>
+      <div class="program-card fade-up" style="transition-delay:0.1s">
+        <div class="program-icon">🌱</div>
+        <h3>Environment</h3>
+        <p>Large-scale tree plantation drives and environmental awareness campaigns for a greener tomorrow.</p>
+        <div class="program-tags">
+          <span class="program-tag">Plantation</span>
+          <span class="program-tag">Awareness</span>
+        </div>
+      </div>
+      <div class="program-card fade-up" style="transition-delay:0.2s">
+        <div class="program-icon">❤️</div>
+        <h3>Healthcare</h3>
+        <p>Free medical camps, blood donation drives, and health awareness initiatives in underserved areas.</p>
+        <div class="program-tags">
+          <span class="program-tag">Medical Camps</span>
+          <span class="program-tag">Blood Donation</span>
+        </div>
+      </div>
+      <div class="program-card fade-up" style="transition-delay:0.3s">
+        <div class="program-icon">👩</div>
+        <h3>Women Empowerment</h3>
+        <p>Skill development workshops and entrepreneurship training to empower women for financial independence.</p>
+        <div class="program-tags">
+          <span class="program-tag">Skills</span>
+          <span class="program-tag">Entrepreneurship</span>
+        </div>
+      </div>
+      <div class="program-card fade-up" style="transition-delay:0.4s">
+        <div class="program-icon">🐶</div>
+        <h3>Animal Welfare</h3>
+        <p>Compassionate animal rescue, feeding initiatives, and advocacy for the welfare of stray animals.</p>
+        <div class="program-tags">
+          <span class="program-tag">Rescue</span>
+          <span class="program-tag">Feeding</span>
+        </div>
+      </div>
+      <div class="program-card fade-up" style="transition-delay:0.5s">
+        <div class="program-icon">🏘️</div>
+        <h3>Community Development</h3>
+        <p>Infrastructure support, sanitation drives, and community leadership programs for holistic growth.</p>
+        <div class="program-tags">
+          <span class="program-tag">Infrastructure</span>
+          <span class="program-tag">Leadership</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:48px">
+      <a href="programs.html" class="btn btn-teal">View All Programs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats section-pad-sm">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <span class="stat-icon">🌟</span>
+        <span class="stat-number" data-target="15000">0</span>
+        <span class="stat-label">Beneficiaries</span>
+      </div>
+      <div class="stat-item fade-up" style="transition-delay:0.1s">
+        <span class="stat-icon">🤝</span>
+        <span class="stat-number" data-target="300">0</span>
+        <span class="stat-label">Volunteers</span>
+      </div>
+      <div class="stat-item fade-up" style="transition-delay:0.2s">
+        <span class="stat-icon">📋</span>
+        <span class="stat-number" data-target="75">0</span>
+        <span class="stat-label">Campaigns</span>
+      </div>
+      <div class="stat-item fade-up" style="transition-delay:0.3s">
+        <span class="stat-icon">🏙️</span>
+        <span class="stat-number" data-target="20">0</span>
+        <span class="stat-label">Cities</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER CTA -->
+<section class="volunteer section-pad">
+  <div class="container">
+    <div class="volunteer-inner">
+      <div class="volunteer-content fade-up">
+        <span class="section-label">Join Our Mission</span>
+        <h2 class="section-title">Become a Part of<br>Our <span>Mission</span></h2>
+        <p class="section-desc">
+          Every great change begins with a single step. Join thousands of passionate volunteers who are transforming communities and changing lives across India.
+        </p>
+        <div class="volunteer-features">
+          <div class="vol-feature">
+            <div class="vol-feature-icon">🌍</div>
+            <div>
+              <h4>Work Across 20+ Cities</h4>
+              <p>Choose your area and make a local difference</p>
+            </div>
+          </div>
+          <div class="vol-feature">
+            <div class="vol-feature-icon">📆</div>
+            <div>
+              <h4>Flexible Commitment</h4>
+              <p>Weekend or weekday programs to fit your schedule</p>
+            </div>
+          </div>
+          <div class="vol-feature">
+            <div class="vol-feature-icon">🏆</div>
+            <div>
+              <h4>Earn Recognition</h4>
+              <p>Certificates and awards for your contributions</p>
+            </div>
+          </div>
+        </div>
+        <a href="volunteer.html" class="btn btn-primary">Join Now →</a>
+      </div>
+      <div class="volunteer-visual fade-in">
+        <img src="assets/images/gallery_community.png" alt="Volunteers at work">
+        <div class="vol-overlay">
+          <div class="vol-overlay-icon">❤️</div>
+          <div class="vol-overlay-text">
+            <h4>300+ Active Volunteers</h4>
+            <p>Making a difference every single day</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY PREVIEW -->
+<section class="gallery section-pad">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title" style="color:var(--white)">Gallery of <span>Impact</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item fade-in">
+        <img src="assets/images/gallery_education.png" alt="Education Program">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Education Support</h4><span>📚 Digital Learning Initiative</span></div></div>
+      </div>
+      <div class="gallery-item fade-in" style="transition-delay:0.1s">
+        <img src="assets/images/gallery_plantation.png" alt="Tree Plantation">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Tree Plantation</h4><span>🌱 Green Earth Campaign</span></div></div>
+      </div>
+      <div class="gallery-item fade-in" style="transition-delay:0.2s">
+        <img src="assets/images/gallery_medical.png" alt="Medical Camp">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Medical Camps</h4><span>❤️ Free Healthcare Drive</span></div></div>
+      </div>
+      <div class="gallery-item fade-in" style="transition-delay:0.3s">
+        <img src="assets/images/gallery_women.png" alt="Women Empowerment">
+        <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Women Empowerment</h4><span>👩 Skill Development</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px">
+      <a href="gallery.html" class="btn btn-primary">View Full Gallery →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS PREVIEW -->
+<section class="testimonials section-pad">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="section-label">What They Say</span>
+      <h2 class="section-title">Voices of <span>Change</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Volunteering with HopeBridge has been the most fulfilling experience of my life. Watching children light up as they learn — there's no greater joy. I'm proud to be part of this mission."</p>
+        <div class="testimonial-author">
+          <img src="assets/images/volunteer_sarah.png" alt="Ananya Sharma">
+          <div class="testimonial-author-info">
+            <h4>Ananya Sharma</h4>
+            <span>Education Volunteer, Delhi</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.15s">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The medical camp we organized in rural Rajasthan served over 400 families in just two days. HopeBridge gave me the platform to use my skills where they're needed the most."</p>
+        <div class="testimonial-author">
+          <img src="assets/images/volunteer_rahul.png" alt="Dr. Rahul Verma">
+          <div class="testimonial-author-info">
+            <h4>Dr. Rahul Verma</h4>
+            <span>Medical Volunteer, Jaipur</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.3s">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The women's skill development program completely changed my life. I went from depending on others to running my own small business. HopeBridge didn't just help me — they empowered me."</p>
+        <div class="testimonial-author">
+          <img src="assets/images/volunteer_priya.png" alt="Meera Devi">
+          <div class="testimonial-author-info">
+            <h4>Meera Devi</h4>
+            <span>Program Beneficiary, Lucknow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE CTA BANNER -->
+<section style="background:linear-gradient(135deg,var(--gold-dark),var(--gold));padding:72px 0;text-align:center">
+  <div class="container">
+    <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);margin-bottom:16px;font-family:'Playfair Display',serif">Your Donation Changes Lives</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:1.05rem;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto">Even ₹500 can provide a month of tutoring to a child in need. Be the reason someone smiles today.</p>
+    <a href="donate.html" class="btn" style="background:var(--white);color:var(--gold-dark);font-weight:700;font-size:1rem;padding:16px 40px;box-shadow:0 4px 20px rgba(0,0,0,0.15)">Donate Now ❤</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="assets/images/logo.png" alt="HopeBridge Logo" style="width:40px;height:40px;border-radius:8px">
+          <div class="nav-logo-text">HopeBridge<span>Foundation</span></div>
+        </div>
+        <p>Building hope and empowering lives through education, healthcare, environmental conservation, and community development across India.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" title="Facebook">f</a>
+          <a href="#" class="social-btn" title="Twitter">𝕏</a>
+          <a href="#" class="social-btn" title="Instagram">📸</a>
+          <a href="#" class="social-btn" title="LinkedIn">in</a>
+          <a href="#" class="social-btn" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">→ Home</a></li>
+          <li><a href="about.html">→ About Us</a></li>
+          <li><a href="programs.html">→ Our Programs</a></li>
+          <li><a href="volunteer.html">→ Volunteer</a></li>
+          <li><a href="donate.html">→ Donate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html">→ Education Support</a></li>
+          <li><a href="programs.html">→ Environment</a></li>
+          <li><a href="programs.html">→ Healthcare</a></li>
+          <li><a href="programs.html">→ Women Empowerment</a></li>
+          <li><a href="programs.html">→ Animal Welfare</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@hopebridgefoundation.org">→ info@hopebridgefoundation.org</a></li>
+          <li><a href="tel:+911234567890">→ +91 12345 67890</a></li>
+          <li><a href="#">→ 42, Hope Street, New Delhi</a></li>
+          <li><a href="contact.html">→ Contact Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 HopeBridge Foundation. All rights reserved.</span>
+      <span>Made with ❤ for a better world</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
